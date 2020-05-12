@@ -23,7 +23,6 @@ class NewsTableViewController: UITableViewController {
         
         title = "News"
         articles = api.getArticles()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "articleCell")
     }
 
     // MARK: - Table view data source
@@ -38,8 +37,8 @@ class NewsTableViewController: UITableViewController {
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath)
-        cell.textLabel?.text = articles[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as! ArticleCell
+        cell.configureCell(with: articles[indexPath.row])
         
         return cell
     }

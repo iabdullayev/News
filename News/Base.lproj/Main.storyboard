@@ -22,22 +22,36 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is the title label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJR-hu-6Dt">
-                                            <rect key="frame" x="20" y="11" width="164" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is the subtitle label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-4D-GbT">
-                                            <rect key="frame" x="20" y="24" width="180" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the subtitle label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-4D-GbT">
+                                            <rect key="frame" x="15" y="39" width="384" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Usx-EU-6iq"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the title label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJR-hu-6Dt">
+                                            <rect key="frame" x="15" y="10" width="384" height="30"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="cJR-hu-6Dt" secondAttribute="bottom" constant="30" id="0HR-ka-biZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="cJR-hu-6Dt" secondAttribute="trailing" constant="15" id="1J3-s7-XgD"/>
+                                        <constraint firstAttribute="trailing" secondItem="Qbu-4D-GbT" secondAttribute="trailing" constant="15" id="6wv-dq-ihc"/>
+                                        <constraint firstItem="cJR-hu-6Dt" firstAttribute="top" secondItem="LQa-8J-BV7" secondAttribute="top" constant="10" id="TXJ-LB-5Pw"/>
+                                        <constraint firstItem="cJR-hu-6Dt" firstAttribute="leading" secondItem="LQa-8J-BV7" secondAttribute="leading" constant="15" id="X5i-v1-I3c"/>
+                                        <constraint firstAttribute="bottom" secondItem="Qbu-4D-GbT" secondAttribute="bottom" constant="10" id="g0x-fh-Ofr"/>
+                                        <constraint firstItem="Qbu-4D-GbT" firstAttribute="leading" secondItem="LQa-8J-BV7" secondAttribute="leading" constant="15" id="jup-TB-1dX"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="subtitleLabel" destination="Qbu-4D-GbT" id="L4Y-mE-kzL"/>
+                                    <outlet property="titleLabel" destination="cJR-hu-6Dt" id="dau-NO-aN9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
