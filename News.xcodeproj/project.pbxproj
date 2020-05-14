@@ -20,6 +20,7 @@
 		5A35BE2B2469986400995A27 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A35BE2A2469986400995A27 /* MockAPI.swift */; };
 		5A35BE2F2469D77700995A27 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A35BE2E2469D77700995A27 /* NewsTableViewController.swift */; };
 		5AAB063D2469E8E80063AF70 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAB063C2469E8E80063AF70 /* ArticleCell.swift */; };
+		5AD8814E246DA0D7001907AD /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD8814D246DA0D7001907AD /* NewsDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		5A35BE2A2469986400995A27 /* MockAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPI.swift; sourceTree = "<group>"; };
 		5A35BE2E2469D77700995A27 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		5AAB063C2469E8E80063AF70 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		5AD8814D246DA0D7001907AD /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				5A35BE2E2469D77700995A27 /* NewsTableViewController.swift */,
 				5AAB063C2469E8E80063AF70 /* ArticleCell.swift */,
+				5AD8814D246DA0D7001907AD /* NewsDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD8814E246DA0D7001907AD /* NewsDetailViewController.swift in Sources */,
 				5A35BE272469898200995A27 /* Article.swift in Sources */,
 				5A35BE0B2469782400995A27 /* AppDelegate.swift in Sources */,
 				5A35BE2F2469D77700995A27 /* NewsTableViewController.swift in Sources */,
