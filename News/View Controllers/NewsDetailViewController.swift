@@ -76,6 +76,26 @@ class NewsDetailViewController: UIViewController, WKNavigationDelegate {
                 decisionHandler(.allow)
                 return
             }
+            
+            if let url = navigationAction.request.url {
+                let safari = SFSafariViewController(url: url)
+                safari.modalPresentationStyle = .popover
+                present(safari, animated: true)
+                decisionHandler(.cancel)
+                return
+            }
+            
+            //TO open link directly from Safari app
+            /*
+             if let url = navigationAction.request.url {
+                 UIApplication.shared.open(url)
+                 decisionHandler(.cancel)
+                 return
+             }
+             */
+            
+            
+            decisionHandler(.allow)
         }
 
         assert(article != nil, "article == nil in New Detail VC!")

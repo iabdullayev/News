@@ -52,6 +52,7 @@
                                 <connections>
                                     <outlet property="subtitleLabel" destination="Qbu-4D-GbT" id="L4Y-mE-kzL"/>
                                     <outlet property="titleLabel" destination="cJR-hu-6Dt" id="dau-NO-aN9"/>
+                                    <segue destination="QVI-qf-an3" kind="show" id="mjL-9h-hrY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -139,6 +140,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vs3-Xo-u9Q"/>
                     </view>
+                    <navigationItem key="navigationItem" id="A5I-i6-NAC"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="heightConstraint" destination="j77-BB-Pwt" id="g0G-bc-7F6"/>

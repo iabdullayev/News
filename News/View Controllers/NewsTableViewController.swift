@@ -43,7 +43,12 @@ class NewsTableViewController: UITableViewController {
         return cell
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailVC = segue.destination as? NewsDetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow {
+            detailVC.article = articles[indexPath.row]
+        }
+    }
 
 
     /*
