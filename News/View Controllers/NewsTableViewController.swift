@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NewsTableViewController: UITableViewController {
 
     var api: API
-    var articles = [Article]()
+    var articles: Results<Article> {
+        try! Realm().objects(Article.self).sorted(byKeyPath: "date", ascending: false)
+    }
     
     required init?(coder: NSCoder) {
         api = NewsAPI()
@@ -23,7 +26,7 @@ class NewsTableViewController: UITableViewController {
         
         title = "News"
         api.getArticles {
-            
+            self.tableView.reloadData()
         }
     }
 

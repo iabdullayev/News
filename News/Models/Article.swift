@@ -7,14 +7,19 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Article {
-    var id: String = ""
-    var url: String = ""
-    var title: String = ""
-    var text: String = ""
-    var publisher: String = ""
-    var author: String = ""
-    var image: String = ""
-    var date: Date = Date()
+class Article: Object, Codable {
+    @objc dynamic var id: String = ""
+    @objc dynamic var url: String = ""
+    @objc dynamic var title: String = ""
+    @objc dynamic var text: String = ""
+    @objc dynamic var publisher: String = ""
+    @objc dynamic var author: String = ""
+    @objc dynamic var image: String = ""
+    @objc dynamic var date: Date = Date()
+    
+    override static func primaryKey() -> String? {
+        "id"
+    }
 }

@@ -12,9 +12,6 @@
 		5A35BE122469782400995A27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A35BE102469782400995A27 /* Main.storyboard */; };
 		5A35BE142469782B00995A27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A35BE132469782B00995A27 /* Assets.xcassets */; };
 		5A35BE172469782B00995A27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A35BE152469782B00995A27 /* LaunchScreen.storyboard */; };
-		5A35BE2024697AE300995A27 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5A35BE1F24697AE300995A27 /* RealmSwift */; };
-		5A35BE2224697AE300995A27 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5A35BE2124697AE300995A27 /* Realm */; };
-		5A35BE2524697B9900995A27 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5A35BE2424697B9900995A27 /* SDWebImage */; };
 		5A35BE272469898200995A27 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A35BE262469898200995A27 /* Article.swift */; };
 		5A35BE292469978600995A27 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A35BE282469978600995A27 /* API.swift */; };
 		5A35BE2B2469986400995A27 /* MockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A35BE2A2469986400995A27 /* MockAPI.swift */; };
@@ -22,6 +19,11 @@
 		5AAB063D2469E8E80063AF70 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAB063C2469E8E80063AF70 /* ArticleCell.swift */; };
 		5AD8814E246DA0D7001907AD /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD8814D246DA0D7001907AD /* NewsDetailViewController.swift */; };
 		5AD88150246DF86B001907AD /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD8814F246DF86B001907AD /* NewsAPI.swift */; };
+		5AD88152246F13C3001907AD /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD88151246F13C3001907AD /* Response.swift */; };
+		5AD88155246F2374001907AD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5AD88154246F2374001907AD /* RealmSwift */; };
+		5AD88157246F2374001907AD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5AD88156246F2374001907AD /* Realm */; };
+		5AD8815A246F23D5001907AD /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5AD88159246F23D5001907AD /* SDWebImage */; };
+		5AD8815D246F54CF001907AD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8815C246F54CF001907AD /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		5AAB063C2469E8E80063AF70 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		5AD8814D246DA0D7001907AD /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		5AD8814F246DF86B001907AD /* NewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
+		5AD88151246F13C3001907AD /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		5AD8815C246F54CF001907AD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,9 +50,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A35BE2524697B9900995A27 /* SDWebImage in Frameworks */,
-				5A35BE2224697AE300995A27 /* Realm in Frameworks */,
-				5A35BE2024697AE300995A27 /* RealmSwift in Frameworks */,
+				5AD8815D246F54CF001907AD /* WebKit.framework in Frameworks */,
+				5AD8815A246F23D5001907AD /* SDWebImage in Frameworks */,
+				5AD88157246F2374001907AD /* Realm in Frameworks */,
+				5AD88155246F2374001907AD /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,7 @@
 			children = (
 				5A35BE092469782400995A27 /* News */,
 				5A35BE082469782300995A27 /* Products */,
+				5AD8815B246F54CE001907AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				5A35BE262469898200995A27 /* Article.swift */,
+				5AD88151246F13C3001907AD /* Response.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,6 +120,14 @@
 				5AD8814D246DA0D7001907AD /* NewsDetailViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5AD8815B246F54CE001907AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AD8815C246F54CF001907AD /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +147,9 @@
 			);
 			name = News;
 			packageProductDependencies = (
-				5A35BE1F24697AE300995A27 /* RealmSwift */,
-				5A35BE2124697AE300995A27 /* Realm */,
-				5A35BE2424697B9900995A27 /* SDWebImage */,
+				5AD88154246F2374001907AD /* RealmSwift */,
+				5AD88156246F2374001907AD /* Realm */,
+				5AD88159246F23D5001907AD /* SDWebImage */,
 			);
 			productName = News;
 			productReference = 5A35BE072469782300995A27 /* News.app */;
@@ -165,8 +180,8 @@
 			);
 			mainGroup = 5A35BDFE2469782300995A27;
 			packageReferences = (
-				5A35BE1E24697AE300995A27 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
-				5A35BE2324697B9900995A27 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				5AD88153246F2373001907AD /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				5AD88158246F23D5001907AD /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 5A35BE082469782300995A27 /* Products */;
 			projectDirPath = "";
@@ -199,6 +214,7 @@
 				5A35BE272469898200995A27 /* Article.swift in Sources */,
 				5AD88150246DF86B001907AD /* NewsAPI.swift in Sources */,
 				5A35BE0B2469782400995A27 /* AppDelegate.swift in Sources */,
+				5AD88152246F13C3001907AD /* Response.swift in Sources */,
 				5A35BE2F2469D77700995A27 /* NewsTableViewController.swift in Sources */,
 				5A35BE0D2469782400995A27 /* SceneDelegate.swift in Sources */,
 				5AAB063D2469E8E80063AF70 /* ArticleCell.swift in Sources */,
@@ -403,7 +419,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5A35BE1E24697AE300995A27 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		5AD88153246F2373001907AD /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
@@ -411,7 +427,7 @@
 				minimumVersion = 4.4.1;
 			};
 		};
-		5A35BE2324697B9900995A27 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+		5AD88158246F23D5001907AD /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
 			requirement = {
@@ -422,19 +438,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5A35BE1F24697AE300995A27 /* RealmSwift */ = {
+		5AD88154246F2374001907AD /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5A35BE1E24697AE300995A27 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = 5AD88153246F2373001907AD /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
 		};
-		5A35BE2124697AE300995A27 /* Realm */ = {
+		5AD88156246F2374001907AD /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5A35BE1E24697AE300995A27 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = 5AD88153246F2373001907AD /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = Realm;
 		};
-		5A35BE2424697B9900995A27 /* SDWebImage */ = {
+		5AD88159246F23D5001907AD /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5A35BE2324697B9900995A27 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			package = 5AD88158246F23D5001907AD /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class NewsAPI: API {
     func getArticles() -> [Article] {
@@ -27,8 +28,32 @@ class NewsAPI: API {
                 print("Something went wrong")
                 return
             }
-            if let json = try? JSONSerialization.jsonObject(with: data!, options: []) {
-                print(json)
+            
+            let realm = try! Realm()
+            realm.beginWrite()
+            
+            do {
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                let response = try decoder.decode(Response.self, from: data!)
+                
+                for article in response.articles {
+                    realm.add(article, update: .modified)
+                }
+                
+            } catch {
+                print("JSON Error \(error.localizedDescription)")
+                return
+            }
+            
+            do {
+                try realm.commitWrite()
+            } catch (let error) {
+                print("What? No Realm? \(error)")
+            }
+            
+            DispatchQueue.main.async {
+                completionHandler()
             }
         }
         task.resume()
