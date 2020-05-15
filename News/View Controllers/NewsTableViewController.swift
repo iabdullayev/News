@@ -14,7 +14,7 @@ class NewsTableViewController: UITableViewController {
     var articles = [Article]()
     
     required init?(coder: NSCoder) {
-        api = MockAPI()
+        api = NewsAPI()
         super.init(coder: coder)
     }
     
@@ -22,7 +22,9 @@ class NewsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         title = "News"
-        articles = api.getArticles()
+        api.getArticles {
+            
+        }
     }
 
     // MARK: - Table view data source
